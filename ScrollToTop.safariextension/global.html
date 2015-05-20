@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>global page</title>
+   <script type="text/javascript" src="./Scripts/handlers.js"></script>
+   <script type="text/javascript">
+
+	var handlers = new Handlers();
+
+	safari.application.addEventListener("activate", handlers.tabActivated, true);
+	safari.application.addEventListener("deactivate", handlers.tabDeactivated, true);
+
+	safari.application.addEventListener("message", handlers.messageReceived, false);
+
+	safari.extension.secureSettings.addEventListener("change", handlers.settingsChanged, false);
+	
+   </script>
+</head>
+</html>
