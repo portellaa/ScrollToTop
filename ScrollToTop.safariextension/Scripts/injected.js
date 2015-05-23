@@ -5,17 +5,17 @@ function mouseClicked(event) {
 
 // Callback to handle message sent by the proxy
 function handleMessage(event) {
-	console.log("Received message...");
 
 	if (event.name === "scrollToTop") {
-		smoothScrollToTop();
+        var scrollValue = event.message;
+		smoothScrollToTop(scrollValue);
 	}
 }
 
-function smoothScrollToTop() {
+function smoothScrollToTop(factor) {
     const
         scrollHeight = window.scrollY,
-        scrollDuration = Math.round(scrollHeight / 5),
+        scrollDuration = Math.round(scrollHeight / factor),
         scrollStep = Math.PI / ( scrollDuration / 15 ),
         cosParameter = scrollHeight / 2;
 
@@ -37,7 +37,7 @@ function smoothScrollToTop() {
 // Listeners
 
 // Listening for mouse click event
-window.addEventListener('click', mouseClicked, false);
+window.addEventListener("click", mouseClicked, false);
 
 // Listen from message sent from the global.html
 safari.self.addEventListener("message", handleMessage, false);

@@ -1,4 +1,4 @@
-function Handlers () {
+function Handlers (app, settings) {
 	var changingSettings = false;
 
 	this.settingsChanged = function (event) {
@@ -9,11 +9,11 @@ function Handlers () {
 			changingSettings = true;
 
 			if (event.key === "yClickArea") {
-				safari.extension.secureSettings.yClickAreaValue = event.newValue;
+				settings.yClickAreaValue = event.newValue;
 			}
 
 			else if (event.key === "yClickAreaValue") {
-				safari.extension.secureSettings.yClickArea = event.newValue;
+				settings.yClickArea = event.newValue;
 			}
 
 			changingSettings = false;
@@ -32,14 +32,15 @@ function Handlers () {
       console.log("Received message with key: " + event.name);
 
       if (!changingSettings && (event.name === Handlers.mouseMessageEventName)) {
-         console.log("Mouse clicked...");
 
-         var yOffset = safari.extension.settings.yClickArea;
+         var yOffset = settings["yClickArea"];
 
          var yPosition = event.message;
 
          if ((yPosition !== undefined) && (yPosition <= yOffset)) {
-            safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("scrollToTop", yPosition);
+         	var speed = settings["scrollSpeed"];
+
+            app.activeBrowserWindow.activeTab.page.dispatchMessage("scrollToTop", speed);
          }
       }
    };

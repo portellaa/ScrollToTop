@@ -36,5 +36,25 @@
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Scroll Behaviour</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<real>5</real>
+		<key>Key</key>
+		<string>scrollSpeed</string>
+		<key>MaximumValue</key>
+		<real>30</real>
+		<key>MinimumValue</key>
+		<real>5</real>
+		<key>Title</key>
+		<string>Scroll speed</string>
+		<key>Type</key>
+		<string>Slider</string>
+	</dict>
 </array>
 </plist>

@@ -5,7 +5,7 @@
    <script type="text/javascript" src="./Scripts/handlers.js"></script>
    <script type="text/javascript">
 
-	var handlers = new Handlers();
+	var handlers = new Handlers(safari.application, safari.extension.settings);
 
 	safari.application.addEventListener("activate", handlers.tabActivated, true);
 	safari.application.addEventListener("deactivate", handlers.tabDeactivated, true);

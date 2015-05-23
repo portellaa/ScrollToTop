@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>meligaletiko</string>
+	<string>Luís Portela Afonso</string>
 	<key>Builder Version</key>
 	<string>10600.6.3</string>
 	<key>CFBundleDisplayName</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
@@ -32,20 +32,20 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Adds ability to scroll to the top by tapping on the top of the page</string>
+	<string>Adds ability to scroll to the top by tapping in the top of it</string>
 	<key>DeveloperIdentifier</key>
-	<string><!--your dev key--></string>
+	<string>5NNJQUZ7TT</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
 	<dict>
 		<key>Website Access</key>
 		<dict>
-			<key>Include Secure Pages</key>
-			<true/>
 			<key>Level</key>
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Website</key>
+	<string>http://about.me/meligaletiko</string>
 </dict>
 </plist>
